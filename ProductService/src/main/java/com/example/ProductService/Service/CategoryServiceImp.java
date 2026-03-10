@@ -4,11 +4,11 @@ import com.example.ProductService.Dto.CategoryRequestDto;
 import com.example.ProductService.Dto.CategoryResponseDto;
 import com.example.ProductService.Model.Category;
 import com.example.ProductService.Repository.CategoryRepository;
-import org.hibernate.validator.constraints.ParameterScriptAssert;
+import org.springframework.stereotype.Service;
 
-import java.awt.*;
-
-public class CategoryServiceImp {
+import java.util.List;
+@Service
+public class CategoryServiceImp implements CategoryService {
     private final CategoryRepository CategoryRepository;
 
     public CategoryServiceImp(CategoryRepository categoryRepository) {
@@ -53,6 +53,11 @@ public class CategoryServiceImp {
                 .name(category.getName())
                 .description(category.getDescription())
                 .build();
+    }
+
+    @Override
+    public CategoryResponseDto updateCategory(Long id, CategoryRequestDto request) {
+        return null;
     }
     @Override
     public void deleteCategory(Long id) {

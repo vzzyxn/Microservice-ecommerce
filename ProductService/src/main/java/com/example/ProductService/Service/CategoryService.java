@@ -4,7 +4,7 @@ import com.example.ProductService.Dto.CategoryRequestDto;
 import com.example.ProductService.Dto.CategoryResponseDto;
 import com.example.ProductService.Repository.CategoryRepository;
 
-import java.awt.*;
+import java.util.List;
 
 public interface CategoryService {
 
@@ -18,5 +18,4 @@ public interface CategoryService {
 
         void deleteCategory(Long id);
 
-    }
 }

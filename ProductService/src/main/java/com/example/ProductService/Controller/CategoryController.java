@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/categories")
+@RequestMapping("api/categories")
 @RequiredArgsConstructor
 public class CategoryController {
 
@@ -27,7 +27,7 @@ public class CategoryController {
     @GetMapping
     public ResponseEntity<List<CategoryResponseDto>> getAllCategories() {
 
-        return ResponseEntity.ok(categoryService.getAllCategories());
+        return ResponseEntity.ok((List<CategoryResponseDto>) categoryService.getAllCategories());
     }
 
     @GetMapping("/{id}")
